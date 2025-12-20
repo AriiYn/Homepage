@@ -1,0 +1,209 @@
+/* --- RESET & BASIC SETUP --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #040b14;
+    --text-color: #ffffff;
+    --accent-color: #149ddd;
+    --hover-color: #128cca;
+    /* Font Stack: Menggunakan font bawaan sistem (aman tanpa internet) */
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- NAVBAR / HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 50px;
+    background: rgba(4, 11, 20, 0.9); /* Transparan gelap */
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+#navbar a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #a8a9b4;
+    padding-bottom: 5px;
+}
+
+#navbar a:hover,
+#navbar a.active {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- HAMBURGER MENU (MOBILE) --- */
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2; /* Di atas canvas particle */
+    padding-top: 60px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Typing Effect Styles */
+.typing-text {
+    color: var(--accent-color);
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.cursor {
+    font-weight: 100;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- CANVAS PARTICLE --- */
+canvas#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* --- FOOTER --- */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: var(--bg-color);
+    font-size: 14px;
+    z-index: 100;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    /* Animasi Hamburger menjadi X saat aktif */
+    .mobile-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    .mobile-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Sembunyi di kanan */
+        width: 70%;
+        height: 100vh;
+        background: #000;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s ease;
+        border-left: 1px solid rgba(255,255,255,0.1);
+    }
+
+    #navbar.active {
+        right: 0; /* Muncul */
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #navbar a {
+        font-size: 18px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+}

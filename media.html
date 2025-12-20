@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery - Fakhri Afkar</title>
+    <link href="assets/img/fotoprofile.jpg" rel="icon">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="logo">
+            <h1>Portofolio</h1>
+        </div>
+        <div class="mobile-toggle" id="mobile-toggle">
+            <span></span><span></span><span></span>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="karya.html">Karya & Project</a></li>
+                <li><a href="media.html" class="active">Media</a></li>
+                <li><a href="informasi.html">Informasi</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <section id="photos" class="section">
+                <div class="section-title">
+                    <h2>Foto</h2>
+                    <p>Dokumentasi kegiatan PKL, Survei, Diagram Tugas Akhir, dan Desain UI/UX.</p>
+                </div>
+
+                <div class="media-grid">
+                    
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/pkl1.jpg" alt="Dokumentasi PKL 1" onclick="openModal(this)">
+                            <div class="overlay"><span><i class="icon-zoom"></i> Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Dokumentasi PKL 1</h3>
+                            <p>Awal dari kegiatan prakerin.</p>
+                            <span class="tag">PKL</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/pkl2.jpg" alt="Dokumentasi PKL 2" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Dokumentasi PKL 2</h3>
+                            <p>Kegiatan bersih-bersih ruangan.</p>
+                            <span class="tag">PKL</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/pkl4.jpg" alt="Foto Akhir PKL" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Foto Akhir PKL</h3>
+                            <p>Foto dokumentasi terakhir kegiatan PKL.</p>
+                            <span class="tag">PKL</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/pkl5.jpg" alt="Makan Bersama Atasan" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Makan Bersama</h3>
+                            <p>Foto dokumentasi makan bersama atasan.</p>
+                            <span class="tag">PKL</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/ta1.jpg" alt="Survei Lapangan" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Foto Perumahan</h3>
+                            <p>Dokumentasi survei lapangan Green Bintaro Indah.</p>
+                            <span class="tag">Survey</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-DFD.jpg" alt="Diagram DFD" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Diagram DFD</h3>
+                            <p>Perancangan sistem Tugas Akhir.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-Use Case.jpg" alt="Diagram Use Case" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Diagram Use Case</h3>
+                            <p>Perancangan alur interaksi sistem.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-Activity Diagram.jpg" alt="Activity Diagram" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Activity Diagram</h3>
+                            <p>Alur aktivitas sistem yang dirancang.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-ERD.jpg" alt="Diagram ERD" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Diagram ERD</h3>
+                            <p>Perancangan relasi database.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-Class Diagram.jpg" alt="Class Diagram" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Class Diagram</h3>
+                            <p>Struktur class pada sistem.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-Flowchart.jpg" alt="Flowchart" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Flowchart Sistem</h3>
+                            <p>Alur logika program secara global.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-Sequence.jpg" alt="Sequence Diagram" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Sequence Diagram</h3>
+                            <p>Urutan proses antar objek.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/Tugas Akhir-Colaboration.jpg" alt="Collaboration Diagram" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Collaboration Diagram</h3>
+                            <p>Interaksi antar objek dalam sistem.</p>
+                            <span class="tag">Diagram</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/figma1.png" alt="UI/UX Perpustakaan" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>UI/UX Perpustakaan</h3>
+                            <p>Desain antarmuka web perpustakaan.</p>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb">
+                            <img src="assets/media/foto/figma2.png" alt="UI/UX Perumahan" onclick="openModal(this)">
+                            <div class="overlay"><span>Perbesar</span></div>
+                        </div>
+                        <div class="media-info">
+                            <h3>UI/UX Real Estate</h3>
+                            <p>Desain antarmuka web perumahan.</p>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="videos" class="section bg-light">
+                <div class="section-title">
+                    <h2>Video</h2>
+                    <p>Kumpulan video demo project dan dokumentasi.</p>
+                </div>
+
+                <div class="media-grid">
+                    
+                    <div class="media-card">
+                        <a href="https://www.youtube.com/watch?v=_C0_FsrqW14" target="_blank" class="media-thumb">
+                            <img src="assets/img/Project/RealEstate-PerumahanGBI_TA.jpg" alt="Demo Real Estate">
+                            <div class="play-icon">▶</div>
+                        </a>
+                        <div class="media-info">
+                            <h3>Demo Web Real Estate</h3>
+                            <p>Showcase fitur aplikasi penjualan rumah.</p>
+                            <span class="tag video-tag">Video</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb" onclick="openModal(this, 'video', 'assets/media/video/cisco1.mp4')">
+                            <img src="assets/img/Project/cisco1.png" alt="Jaringan Komputer 1">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Jaringan Komputer 1</h3>
+                            <p>Perancangan topologi jaringan Cisco Part 1.</p>
+                            <span class="tag video-tag">Video</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb" onclick="openModal(this, 'video', 'assets/media/video/cisco2.mp4')">
+                            <img src="assets/img/Project/cisco2.png" alt="Jaringan Komputer 2">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Jaringan Komputer 2</h3>
+                            <p>Perancangan topologi jaringan Cisco Part 2.</p>
+                            <span class="tag video-tag">Video</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb" onclick="openModal(this, 'video', 'assets/media/video/cisco3.mp4')">
+                            <img src="assets/img/Project/cisco3.png" alt="Jaringan Komputer 3">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Jaringan Komputer 3</h3>
+                            <p>Perancangan topologi jaringan Cisco Part 3.</p>
+                            <span class="tag video-tag">Video</span>
+                        </div>
+                    </div>
+
+                    <div class="media-card">
+                        <div class="media-thumb" onclick="openModal(this, 'video', 'assets/media/video/pkl.mp4')">
+                            <img src="assets/media/foto/pkl3.jpg" alt="Dokumentasi Sembako">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="media-info">
+                            <h3>Dokumentasi Sembako</h3>
+                            <p>Membagikan rezeki pada bulan ramadhan.</p>
+                            <span class="tag video-tag">Video</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="audio" class="section">
+                <div class="section-title">
+                    <h2>Audio & Podcast</h2>
+                </div>
+
+                <div class="media-grid single-col">
+                    <div class="media-card flex-row">
+                        <div class="media-thumb small">
+                            <img src="assets/img/Project/vibecoding.png" alt="Podcast Cover">
+                        </div>
+                        <div class="media-info full-width">
+                            <h3>I HATE VIBE CODING</h3>
+                            <p>Diskusi mengenai fenomena 'vibe coding' dan dampaknya bagi programmer pemula.</p>
+                            <audio controls class="custom-audio">
+                                <source src="assets/media/audio/I HATE VIBE CODING. - WPU.mp3" type="audio/mpeg">
+                                Browser Anda tidak support audio.
+                            </audio>
+                            <span class="tag audio-tag">Podcast</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="documents" class="section bg-light">
+                <div class="section-title">
+                    <h2>Dokumen</h2>
+                </div>
+
+                <div class="media-grid center-grid">
+                    <div class="media-card doc-card">
+                        <div class="media-thumb doc-thumb">
+                            <img src="assets/media/foto/CV.png" alt="CV Preview" onclick="openModal(this)">
+                        </div>
+                        <div class="media-info center-text">
+                            <h3>Curriculum Vitae (CV)</h3>
+                            <p>Lihat detail kualifikasi dan pengalaman saya.</p>
+                            <a href="assets/media/file/CV.pdf" class="btn-download" download>
+                                Download PDF ⬇
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Fakhri Afkar Portofolio. All Rights Reserved.</p>
+    </footer>
+
+    <div id="mediaModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <img class="modal-content" id="modal-img" style="display: none;">
+        <video class="modal-content" id="modal-video" controls style="display: none;">
+            <source src="" type="video/mp4">
+            Browser tidak support video tag.
+        </video>
+
+        <div id="caption"></div>
+    </div>
+
+    <script src="assets/js/media.js"></script>
+</body>
+</html>
