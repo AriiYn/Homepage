@@ -10,7 +10,6 @@
 ---
 
 ## 📸 Preview
-*(Ganti bagian ini dengan screenshot website kamu setelah jadi)*
 <img src="review.png" alt="Website Preview" width="100%">
 
 ---
