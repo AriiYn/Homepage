@@ -8,27 +8,26 @@
     <link rel="stylesheet" href="assets/css/media.css">
 </head>
 <style>
-    /* Styling untuk Modal/Popup */
 .pdf-modal {
-    display: none; /* Tersembunyi default */
+    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Background gelap transparan */
-    backdrop-filter: blur(5px); /* Efek blur di belakang */
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
 }
 
 .pdf-modal-content {
     background-color: #fefefe;
-    margin: 2% auto; /* Posisi tengah vertikal */
+    margin: 2% auto;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    max-width: 1000px; /* Lebar maksimal */
-    height: 90%; /* Tinggi modal */
+    max-width: 1000px;
+    height: 90%;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -36,7 +35,7 @@
 }
 
 .pdf-container {
-    flex-grow: 1; /* Mengisi sisa ruang */
+    flex-grow: 1;
     border: 1px solid #ddd;
     background: #eee;
 }
@@ -55,13 +54,11 @@
     color: red;
 }
 
-/* Animasi muncul halus */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-/* Styling tambahan untuk gambar agar user tahu bisa diklik */
 .doc-thumb img:hover {
     opacity: 0.8;
     transition: 0.3s;
@@ -440,33 +437,24 @@
 
     <script src="assets/js/media.js"></script>
     <script>
-    // Fungsi membuka Modal
     function openPdfPreview(pdfUrl) {
         var modal = document.getElementById("pdfModal");
         var iframe = document.getElementById("pdfFrame");
         var dlLink = document.getElementById("downloadLink");
 
-        // Set sumber iframe ke file PDF
         iframe.src = pdfUrl;
-        // Set link download backup
         dlLink.href = pdfUrl;
-        
-        // Tampilkan modal
         modal.style.display = "block";
     }
 
-    // Fungsi menutup Modal
     function closePdfPreview() {
         var modal = document.getElementById("pdfModal");
         var iframe = document.getElementById("pdfFrame");
         
         modal.style.display = "none";
-        
-        // Kosongkan src iframe agar tidak memakan memori saat ditutup
         iframe.src = ""; 
     }
 
-    // Menutup modal jika user klik di area gelap (luar kotak)
     window.onclick = function(event) {
         var modal = document.getElementById("pdfModal");
         if (event.target == modal) {
