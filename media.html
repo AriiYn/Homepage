@@ -381,7 +381,14 @@
                 <div class="media-grid center-grid">
                     <div class="media-card doc-card">
                         <div class="media-thumb doc-thumb">
-                            <img src="assets/media/foto/cv.png" alt="CV Preview" onclick="openModal(this)">
+                            <img src="assets/media/foto/cv.png" 
+                                alt="CV Preview" 
+                                style="cursor: pointer;"
+                                onclick="openPdfPreview('assets/media/file/CV.pdf')">
+                                
+                            <div class="preview-overlay" onclick="openPdfPreview('assets/media/file/CV.pdf')">
+                                <span>👁️ Preview</span>
+                            </div>
                         </div>
                         <div class="media-info center-text">
                             <h3>Curriculum Vitae (CV)</h3>
@@ -389,6 +396,21 @@
                             <a href="assets/media/file/CV.pdf" class="btn-download" download>
                                 Download PDF ⬇
                             </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pdfModal" class="pdf-modal">
+                    <div class="pdf-modal-content">
+                        <span class="close-btn" onclick="closePdfPreview()">&times;</span>
+                        <h4 style="margin-top:0; color:#333;">Preview CV</h4>
+                        
+                        <div class="pdf-container">
+                            <iframe id="pdfFrame" src="" width="100%" height="100%"></iframe>
+                        </div>
+                        
+                        <div style="margin-top: 10px; text-align: center;">
+                            <a id="downloadLink" href="#" class="btn-download" download>Download File</a>
                         </div>
                     </div>
                 </div>
