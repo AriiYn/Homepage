@@ -7,6 +7,65 @@
     <link href="assets/img/fotoprofile.jpg" rel="icon">
     <link rel="stylesheet" href="assets/css/media.css">
 </head>
+<style>
+.pdf-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.pdf-modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s;
+}
+
+.pdf-container {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    background: #eee;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Animasi muncul halus */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Styling tambahan untuk gambar agar user tahu bisa diklik */
+.doc-thumb img:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+</style>
 <body>
 
     <header id="header">
@@ -357,5 +416,31 @@
     </div>
 
     <script src="assets/js/media.js"></script>
+    <script>
+
+    function openPdfPreview(pdfUrl) {
+        var modal = document.getElementById("pdfModal");
+        var iframe = document.getElementById("pdfFrame");
+        var dlLink = document.getElementById("downloadLink");
+        
+        iframe.src = pdfUrl;
+        dlLink.href = pdfUrl;
+        modal.style.display = "block";
+    }
+
+    function closePdfPreview() {
+        var modal = document.getElementById("pdfModal");
+        var iframe = document.getElementById("pdfFrame");
+        
+        modal.style.display = "none";
+        iframe.src = ""; 
+    }
+    window.onclick = function(event) {
+        var modal = document.getElementById("pdfModal");
+        if (event.target == modal) {
+            closePdfPreview();
+        }
+    }
+</script>
 </body>
 </html>
