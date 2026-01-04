@@ -64,29 +64,14 @@ header {
 #navbar a {
     font-size: 15px;
     font-weight: 500;
-    color: var(--text-muted);
-    position: relative;
+    color: #a8a9b4;
+    padding-bottom: 5px;
 }
 
 #navbar a:hover,
 #navbar a.active {
-    color: #fff;
-}
-
-#navbar a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: var(--accent-color);
-    transition: 0.3s;
-}
-
-#navbar a:hover::after,
-#navbar a.active::after {
-    width: 100%;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 /* --- MOBILE MENU --- */
